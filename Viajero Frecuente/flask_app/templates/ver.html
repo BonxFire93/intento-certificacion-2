@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Destino</title>
+</head>
+<style>
+    div {
+        padding: 8px;
+        align-content: center;
+        border: 2px solid;
+    }
+    label{
+        padding: 8px;
+    }
+    input {
+        padding: 5px;
+    }
+    a {
+        padding: 8px;
+    }
+</style>
+<body>
+    <div>
+        <h1>{{ destino.destino }}</h1>
+        <p>Organizador: {{ destino.nombre_org }}</p>
+        <p>Fecha Inicio: {{ destino.inicio }}</p>
+        <p>Fecha Fin: {{ destino.fin }}</p>
+        <p>Itinerario: {{ destino.itinerario }}</p>
+        <input type="button" value="Unirme!" action="/ver/{{destino.id}}">
+    </div>
+    <a href="/dashboard">Inicio</a>
+    <br>
+    <a href="/cerrar_sesion">Cerrar Sesión</a>
+</body>
+</html>

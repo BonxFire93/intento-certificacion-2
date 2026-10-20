@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 8px;
+    }
+</style>
+<body>
+    <h1>Bienvenido, {{usuario.nombre}}</h1>
+    <table>
+        <thead>
+            <th>Destino</th>
+            <th>Organizador</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th>
+            <th>Acciones</th>
+        </thead>
+        <tbody>
+            {% for destino in destinos %}
+            <tr>
+                    <td>{{destino.destino}}</td>
+                    <td>{{destino.nombre_org}}</td>
+                    <td>{{destino.inicio}}</td>
+                    <td>{{destino.fin}}</td>
+                    <td>{{destino.itinerario}}</td>
+                    <td>
+                        <a href="/eliminar/{{destino.id}}">Eliminar</a>
+                        <a href="/editar/{{destino.id}}">Editar</a>
+                        <a href="/ver/{{destino.id}}">Ver</a>
+                    </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/cerrar_sesion">Cerrar Sesión</a>
+    <a href="/nuevo">Organizar Viaje</a>
+</body>
+</html>

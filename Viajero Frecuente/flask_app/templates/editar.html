@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Viaje</title>
+</head>
+<style>
+    label{
+        padding: 8px;
+    }
+    input {
+        padding: 5px;
+    }
+    a {
+        padding: 8px;
+    }
+</style>
+<body>
+    <h1>Editar Viaje</h1>
+    <p>El itinerario es obligatorio</p>
+    <form action="/dashboard">
+        <label for="destino">Destino:</label>
+        <input type="text" id="destino" name="destino">
+        <br>
+        <label for="inicio">Fecha de Inicio:</label>
+        <input type="date" id="inicio" name="inicio">
+        <br>
+        <label for="fin">Fecha de Fin:</label>
+        <input type="date" id="fin" name="fin">
+        <br>
+        <label for="itinerario">Itinerario:</label>
+        <input type="text" id="itinerario" name="itinerario">
+        <br>
+        <input type="submit" value="Guardar">
+    </form>
+    <a href="/dashboard">Inicio</a>
+    <a href="/cerrar_sesion">Cerrar Sesión</a>
+    <a href="/nuevo">Organizar Viaje</a>
+</body>
+</html>
